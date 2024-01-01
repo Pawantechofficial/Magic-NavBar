@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #06021b;
+}
+.navigation{
+    display: flex;
+    width: 395px;
+    height: 70px;
+    position: relative;
+    background: linear-gradient(45deg, #2e3192, #1bffff);
+    align-items: center;
+    justify-content: center;
+}
+.navigation ul{
+    display: flex;
+    width: 350px;
+}
+.navigation ul li{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    list-style: none;
+    z-index: 1;
+}
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 70px;
+    font-size: 1.5em;
+    color: #fff;
+    transition: 0.5s;
+}
+.navigation ul li.active a .icon{
+transform: translateY(-33px);
+}
+.navigation ul li.active a .text{
+    position: absolute;
+    color: #fff;
+    transform: translateY(18px);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    font-size: .75em;
+    transition: .5s;
+    opacity: 0;
+}
+.navigation ul li a .text{
+opacity: 0;
+}
+.navigation ul li.active a .text{
+opacity: 1;
+}
+.indicator{
+    position: absolute;
+    top: -50%;
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(45deg,#2e3192, #1bffff);
+    border: 5px solid #06021b;
+    transition: .5s;
+}
+.navigation ul li:nth-child(1).active~.indicator{
+    left: 25px;
+    transform: rotate(45deg);
+}
+.navigation ul li:nth-child(2).active~.indicator{
+    left: 95px;
+    transform: rotate(135deg);
+}
+.navigation ul li:nth-child(3).active~.indicator{
+    left: 165px;
+    transform: rotate(225deg);
+}
+.navigation ul li:nth-child(4).active~.indicator{
+    left: 235px;
+    transform: rotate(315deg);
+}
+.navigation ul li:nth-child(5).active~.indicator{
+    left: 305px;
+    transform: rotate(405deg);
+}
